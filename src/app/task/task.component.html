@@ -1,0 +1,13 @@
+<div class="container">
+  <input type="text" class="task-input" placeholder="Enter task..."
+    [(ngModel)]="task.title"/>
+
+  <div>
+    <select class="task-status" [(ngModel)]="task.status">
+      <option *ngFor="let stat of statusOptions"
+        [value]="stat.value">{{stat.label}}</option>
+    </select>
+
+    <div class="btn" (click)="doRemoveTask()">Remove</div>
+  </div>
+</div>

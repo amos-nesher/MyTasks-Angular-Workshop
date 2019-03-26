@@ -1,0 +1,29 @@
+.container {
+    padding: 20px; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.task-input {
+    font-size: 20px;
+    border: none;
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid #333;
+    }
+}
+
+.task-status {
+    font-size: 20px;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}

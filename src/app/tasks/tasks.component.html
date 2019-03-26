@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="btn" (click)="doAddTask()">Add Task</div>
+
+  <label>Filter By:</label>
+  <select class="status-filter" (change)="doFilter($event.target.value)">
+      <option value="all">All</option>
+      <option *ngFor="let stat of statusOptions"
+        [value]="stat.value">{{stat.label}}</option>
+    </select>
+
+  <div class="btn" (click)="doPrint()">Print</div>
+</div>
+
+<div class="tasks-container">
+  <app-task *ngFor="let task of (tasks | statusFilter : filterStatus)"
+            [task]="task"
+            (remove)="doRemoveTask($event)">
+  </app-task>
+</div>
