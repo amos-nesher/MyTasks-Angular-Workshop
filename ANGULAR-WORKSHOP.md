@@ -36,7 +36,7 @@ We will use the *Subject* class from "rxjs" for this exercise.
 - Add a Subject to the tasks.service
 - Any change in the tasks list should send a new immutable tasks list to the Subject
 - The app component need to subscribe to the Subject from the tasks.service
-- Upon a new value from the Subject (a new tasks list has arrived), the whole tasks list will be updated
+- Upon a new value from the Subject (a new tasks list has arrived), the whole tasks list will be updated. Use the Angular build-in 'async' pipe
 - Task component needs to fire an "update" event when the task values are changed. It will not directly change the "real" task values
 - The Tasks will forward the "update" event to the app component
 - The app component will use a new "updateTask" function in tasks.service to update the task information
